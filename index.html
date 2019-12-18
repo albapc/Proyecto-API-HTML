@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Proyecto 4</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0px auto;
+            width: 1000px;
+        }
+
+        h1 {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 60px;
+            letter-spacing: 2px;
+            word-spacing: 2px;
+            color: #CE3CA1;
+            font-weight: 700;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: small-caps;
+            text-transform: none;
+        }
+
+        .font-text {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 20px;
+            letter-spacing: 2px;
+            word-spacing: 2px;
+            color: #CE3CA1;
+            font-weight: 700;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: normal;
+            text-transform: none;
+        }
+    </style>
+    <script type="text/javascript" src="proyecto4JS.js"></script>
+</head>
+<body onload="setDynamicBackground()">
+<h1>Carga de ficheros</h1>
+<p class="font-text">Sube un fichero de vídeo para poder verlo en esta página. Solo son válidos los formatos MP4, WEBM y
+    OGV.</p>
+<input type="file" onchange="previewFile(this)"><br>
+<p id="info"></p>
+<video src="" id="video" accept="video/*" alt="Preview del video...">
+    <p>Navegador no soportado</p>
+</video>
+<!--los botones van incluidos dentro de una tabla para que aparezcan alineados, ya que de otra forma aparecia uno encima del otro-->
+<table id="table">
+    <tr>
+        <td><a id="reproducir"></a></td>
+        <td><a id="pausa"></a></td>
+        <td><a id="detener"></a></td>
+        <td><a id="subirVolumen"></a></td>
+        <td><a id="bajarVolumen"></a></td>
+    </tr>
+</table>
+</body>
+</html>
